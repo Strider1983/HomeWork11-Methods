@@ -19,6 +19,17 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
+    public static void countDeliveryTime (int deliveryDistance) {
+        if (deliveryDistance <20) {
+            System.out.println("Потребуется дней: 1");
+        } else if(deliveryDistance <60) {
+            System.out.println("Потребуется дней: 2");
+        } else if (deliveryDistance <=100) {
+            System.out.println("Потребуется дней: 3");
+        } else {
+            System.out.println("Доставки нет.");
+        }
+    }
     public static void main(String[] args) {
         System.out.println("Методы");
         System.out.println("--------------------------");
@@ -31,5 +42,10 @@ public class Main {
         int clientDeviceOS = 0;
         int clientDeviceYear = LocalDate.now().getYear();
         appDownload(year, clientDeviceOS);
+        //
+        System.out.println("--------------------------");
+        System.out.println("Задача №3");
+        int deliveryDistance = 105;
+        countDeliveryTime(deliveryDistance);
         }
     }
